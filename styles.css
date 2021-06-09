@@ -1,0 +1,80 @@
+* {
+    border: 1px solid black;
+}
+header{
+    height: 100px;
+    grid-area: header;
+}
+nav{
+    height: 50px;
+    grid-area: nav;
+}
+footer{
+    height: 150px;
+    grid-area: footer;
+}
+.focus{
+    height: 400px;
+    grid-area: focus;
+}
+.shop{
+    height: 50px;
+    grid-area: shop;
+}
+aside{
+    height: 800px;
+    grid-area: aside;
+}
+main{
+    height: auto;
+    grid-area: main;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+section.product{
+    width: 305px;
+    height: 400px;
+    flex: 1 1 auto;
+    margin-top: 10px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+
+}
+.mainContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header" 
+        "nav nav nav nav nav" 
+        "focus focus focus focus focus"
+        "shop shop shop shop shop"
+        "aside main main main main"
+        "footer footer footer footer footer";
+}
+div.up{
+    width: 45px;
+    height: 45px;
+    position: sticky;
+    bottom: 50px;
+    left: 95%;
+}
+@media screen and (max-width: 768px) {
+    .focus{
+        display: none;
+    }
+    .shop{
+        display: none;
+    }
+    nav{
+        height: 100px;
+    }
+    .mainContainer{
+        grid-template-areas:
+        "nav header header header header" 
+        "aside aside aside aside aside"
+        "main main main main main"
+        "footer footer footer footer footer";
+    }
+  }
