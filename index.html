@@ -5,17 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>That Stone Store</title>
+    <script src="https://kit.fontawesome.com/0113cd4765.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
     <div class="mainContainer">
-        <header>header</header>
-        <nav>main nav</nav>
+        <header>
+            <img class="logo" src="pic/logo.png" alt="That Stone Store logo">
+            <input class="search" type="text" id="search" name="search" value=" Search">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-bag"></i>
+        </header>
+        <nav>
+            <ul class="menu">
+                <a href="index.html" class="menu">HOME</a>
+                <a href="index.html#shop" class="menu">SHOP</a>
+                <a href="crystalpedia.html" class="menu">CRYSTALPEDIA</a>
+                <a href="about_us.html" class="menu">ABOUT US</a>
+            </ul>
+            <ul class="socialMedia">
+                <a href="https://www.facebook.com/thatstonestore" class="socialMedia">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/thatstonestore/" class="socialMedia">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/home" class="socialMedia">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </ul>
+        </nav>
         <div class="focus">focus pics</div>
-        <div class="shop">shop</div>
-        <aside>sidebar</aside>
+        <div class="shop" id="shop">Shop</div>
+        <aside>
+            <ul class="productType">Shop by Jewelry Type
+                <li><a href="#" class="necklace">Necklace</a></li>
+                <li><a href="#" class="bracelet">Bracelet</a></li>
+                <li><a href="#" class="earrings">Earrings</a></li>
+            </ul>
+            <ul class="stone">Shop by Stone
+                <li><a href="#" class="sunstone">Sunstone</a></li>
+                <li><a href="#" class="agate">Agate</a></li>
+                <li><a href="#" class="citrine">Citrine</a></li>
+                <li><a href="#" class="pearl">Pearl</a></li>
+                <li><a href="#" class="quartz">Quartz</a></li>
+                <li><a href="#" class="aquamarine">Aquamarine</a></li>
+                <li><a href="#" class="labradorite">Labradorite</a></li>
+                <li><a href="#" class="charoite">Charoite</a></li>
+            </ul>
+            <ul class="collection">Shop by Collection
+                <li><a href="#" class="minimalist">Minimalist</a></li>
+                <li><a href="#" class="energy">Energy</a></li>
+                <li><a href="#" class="exotic">Exotic Stones</a></li>
+            </ul>
+        </aside>
         <main>
             <section class="product">
                 <img class="productImg" src="pic/il_1588xN.1975980415_dty7.jpg" alt="">
@@ -77,9 +122,18 @@
                 <p class="productNames">Sunstone Necklace</p>
                 <p class="productPrices">209 SEK</p>    
             </section>
-            
+            <div class="more">View more</div>
         </main>
-        <footer>footer</footer>
+        <footer>
+            <ul class="footerLinks">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Payment</a></li>
+                <li><a href="#">Delivery</a></li>
+                <li><a href="#">Return</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+            <p class="copyright">Copyright WH Fashion © 2021</p>
+        </footer>
     </div>
     <div class="up">UP</div>
 
