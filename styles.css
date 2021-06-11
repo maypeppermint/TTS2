@@ -1,5 +1,5 @@
 * {
-    /* border: 1px solid black;  */
+    /* border: 1px solid black;   */
     padding: 0%;
     margin: 0%;
     text-decoration: none;
@@ -9,6 +9,7 @@
 body,main {
     border: none;
     margin: 0%;
+    overflow: auto;
 }
 header{
     height: 150px;
@@ -17,12 +18,13 @@ header{
     padding-top: 15px;
     padding-bottom: 15px;
 }
-img.logo{
-    height: 150px;
-    width: auto;
+a.logo{
     align-self: center;
     margin-left: 7%;
-
+}
+a img.logo{
+    height: 150px;
+    width: auto;
 }
 input.search{
     height: 30px;
@@ -104,7 +106,7 @@ aside li{
     font-style: normal;
 }
 
-main{
+main.product{
     height: auto;
     grid-area: main;
     display: flex;
@@ -134,7 +136,6 @@ p.productNames{
 p.productPrices{
     flex: 1 1 auto;
     align-self: center;
-
 } 
 div.more{
     width: 100%;
@@ -166,15 +167,92 @@ footer ul{
         "aside main main main main"
         "footer footer footer footer footer";
 }
-div.up{
+div.upDown{
     width: 45px;
-    height: 45px;
+    height: auto;
+    position: -webkit-sticky;
     position: sticky;
     bottom: 50px;
     left: 95%;
+    font-size: 40px;
+    opacity: 50%;
+}
+div i.fa-arrow-circle-up{
+    display: block;
+}
+div i.fa-arrow-circle-down{
+    display: block;
 }
 
- @media screen and (min-width: 746px) and (max-width: 960px){
+/* Crystalpedia Page */
+div.alphabetFilter{
+    width: 100%;
+    height: auto;
+    font-size: 40px;
+    padding: 5px 10%;
+}
+main.crystal{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px 8%;
+}
+section.crystal{
+    width: 240px;
+    height: 240px;
+    align-self: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 10px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+section img{
+    align-self: stretch;
+}
+/* About us Page */
+main.aboutUs{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 10px 8%;
+}
+section.ourStory{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 20px;
+}
+section.ourStory img{
+    width: 40%;
+    margin-right: 3%;
+    flex: 1 1 auto;
+    align-self: flex-start;
+}
+section.ourStory div.storyText{
+    width: 55%;
+    height: auto;
+    align-self: stretch;
+    flex: 1 1 auto;
+}
+section.contactUs{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: stretch;
+}
+section.contactUs Address{
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    margin-bottom: 10px;
+    flex: 1 1 auto;
+}
+section.contactUs iframe{
+    align-self:stretch;
+    flex: 1 1 auto;
+}
+
+
+@media screen and (min-width: 746px) and (max-width: 960px){
     i.fa-shopping-bag{
         margin-left: 15%;
     }
@@ -201,9 +279,11 @@ div.up{
         flex-flow: column wrap;
         height: 150px;
     }
-    img.logo{
-        height: 120px;
+    a.logo{
         margin-left: 10%;
+    }
+    a img.logo{
+        height: 120px;
     }
     input.search{
         display: none;      
