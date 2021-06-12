@@ -187,6 +187,7 @@ footer p.copyright{
         "aside main main main main"
         "footer footer footer footer footer";
 }
+
 div.upDown{
     width: 45px;
     height: auto;
@@ -206,15 +207,17 @@ div i.fa-arrow-circle-down{
 
 /* Crystalpedia Page */
 div.alphabetFilter{
-    width: 100%;
     height: auto;
     font-size: 40px;
     padding: 5px 10%;
+    grid-area: filter
 }
 main.crystal{
+    margin: auto;
     display: flex;
     flex-flow: row wrap;
     padding: 10px 8%;
+    grid-area: main;
 }
 section.crystal{
     width: 240px;
@@ -231,16 +234,25 @@ section.crystal img{
     border-radius: 50%;
     margin-bottom: 10px;
 }
-/* About us Page */
-main.aboutUs{
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 10px 8%;
+.crystalContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header" 
+        "nav nav nav nav nav" 
+        "filter filter filter filter filter"
+        "main main main main main"
+        "footer footer footer footer footer";
 }
+
+/* About us Page */
 section.ourStory{
+    grid-area: story;
     display: flex;
     flex-flow: row nowrap;
-    margin-bottom: 20px;
+    margin: 10px 8%;
+    padding-bottom: 10px;
 }
 section.ourStory img{
     width: 40%;
@@ -255,7 +267,8 @@ section.ourStory div.storyText{
     flex: 1 1 auto;
 }
 section.contactUs{
-    width: 100%;
+    margin: 10px 8%;
+    grid-area: contact;
     display: flex;
     flex-flow: row wrap;
     align-self: stretch;
@@ -271,8 +284,19 @@ section.contactUs iframe{
     align-self:stretch;
     flex: 1 1 auto;
 }
+.aboutUsContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header header" 
+        "nav nav nav nav nav" 
+        "story story story story story"
+        "contact contact contact contact contact"
+        "footer footer footer footer footer";
+}
 
-/* Product Page */
+/* Product Page 
 main.item{
     margin-left: 7%;
     margin-right: 7%;
@@ -297,12 +321,12 @@ main div.itemPics img.mainPic{
     flex-flow: column nowrap;
     margin: 10px; 
 }
-/* main div.itemPics div.mainPic img{
+main div.itemPics div.mainPic img{
     width: 475px;
     height: auto;
     flex: 1 1 auto;
     align-self: stretch;
-} */
+} 
 main div.itemPics div.thumbnails{
     width: 3%; 
     height: auto;
@@ -324,7 +348,7 @@ main div.itemPics div.thumbnails img{
 main div.itemDetails{
     width: 41%;
     flex: 1 1 auto;
-}
+}*/
 
 @media screen and (min-width: 746px) and (max-width: 960px){
     i.fa-shopping-bag{
@@ -340,6 +364,35 @@ main div.itemDetails{
         width: 250px;
     }
 } 
+    /* Crystalpedia page */
+    div.alphabetFilter{
+        padding: 5px 8%;
+        text-align: center;
+    }
+    main.crystal{
+        padding: 10px 4%;
+    }
+    section.crystal{
+        width: 207px;
+        height: 250px;
+    }
+
+    /* About us page */
+    section.ourStory{
+        flex-flow: row wrap;
+        display: block;
+    }
+    section.ourStory img{
+        width: 400px;
+        display: block;
+        margin: auto;
+    }
+    section.ourStory div.storyText{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
 
 @media screen and (max-width: 745px) {
     .focus{
@@ -385,13 +438,69 @@ main div.itemDetails{
         margin-left: 2%;
         margin-right: 2%;
     }
-
     .mainContainer{
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-        "header header nav" 
-        "aside aside aside"
-        "main main main"
-        "footer footer footer";
+            "header header nav" 
+            "aside aside aside"
+            "main main main"
+            "footer footer footer";
+    }
+
+    /* Crystalpedia page */
+    div.alphabetFilter{
+        padding: 5px 4%;
+        font-size: 26px;
+    }
+    section.crystal{
+        width: 300px;
+        height:auto;
+    }
+    .crystalContainer{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "header header nav" 
+            "filter filter filter"
+            "main main main"
+            "footer footer footer";
+    }
+    /* main.crystal{
+        padding: 10px 5%;
+    }
+    section.crystal{
+        width: 240px;
+        height: 270px;
+        align-self: stretch;
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 10px;
+        text-align: center;
+        overflow: hidden;
+    } */
+    
+    /* About us page */
+    section.ourStory{
+        flex-flow: row wrap;
+        margin: 10px 4%;
+    }
+    section.ourStory img{
+        width: 100%;
+        align-self: center;
+    }
+    section.ourStory div.storyText{
+        width: 100%;
+        height: auto;
+        align-self: center;
+    }
+    section.contactUs{
+        margin: 10px 4%;
+    }
+    .aboutUsContainer{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "header header nav" 
+            "story story story"
+            "contact contact contact"
+            "footer footer footer";
     }
   }
