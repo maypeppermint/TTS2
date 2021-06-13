@@ -1,16 +1,21 @@
 * {
-    border: 1px solid black;
     padding: 0%;
     margin: 0%;
     text-decoration: none;
     list-style: none;
+}
+:root{
+    --bgYellow: #faf7e9;
+    --hfPink: #e46c86;
+    --navOrange: #fd8046;
+    --textDark: #363636;
 }
 p,div{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
 h1{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, Times, 'Times New Roman', serif;
 }
 .active{
     background-color: yellow;
@@ -19,6 +24,7 @@ body,main {
     border: none;
     margin: 0%;
     overflow: auto;
+    background-color: var(--bgYellow);
 }
 header{
     height: 150px;
@@ -26,6 +32,7 @@ header{
     display: flex;
     padding-top: 15px;
     padding-bottom: 15px;
+    background-color: var(--hfPink);
 }
 a.logo{
     align-self: center;
@@ -36,7 +43,7 @@ a img.logo{
     width: auto;
 }
 input.search{
-    height: 30px;
+    height: 32px;
     width: 27%;
     align-self: baseline;
     margin-left: 10%;
@@ -55,11 +62,15 @@ i.fa-shopping-bag{
     align-self: baseline;
     margin-left: 25%;
     margin-top: 50px;
+    color: yellow;
+    opacity: 90%;
+    text-shadow: 3px 3px var(--textDark);
 }
 nav{
     height: auto;
     grid-area: nav;
     display: flex;
+    background-color: var(--navOrange);
 }
 nav i.fas{
     display: none;
@@ -73,23 +84,27 @@ ul.menu{
 a.menu{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
-    font-size: 20px;
-    padding: 3px 10px;
+    font-size: 24px;
+    padding: 4px 10px;
     align-self: center;
     text-align: center;
     flex: 1 1 auto;
+    color: var(--textDark);
 }
 ul.socialMedia{
     align-self: center;
-    margin-left: 10%;
+    margin-left: 8%;
     display: flex;
     width: auto;
 }
 .socialMedia .fab{
     align-self: center;
-    font-size: 40px;
-    padding: 2px 10px;
+    font-size: 36px;
+    padding: 3px 10px;
     flex: 1 1 auto;
+    color: var(--bgYellow);
+    opacity: 75%;
+    text-shadow: 2px 2px var(--textDark);
 }
 .focus{
     height: 400px;
@@ -98,9 +113,17 @@ ul.socialMedia{
 .shop{
     height: 40px;
     grid-area: shop;
+    background-color: var(--hfPink);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--bgYellow);
+    text-align: right;
+    padding: 3px 5%;
+
 }
 aside{
-    height: 800px;
+    height: auto;
     grid-area: aside;
     margin-top: 10px;
     margin-right: 5px;
@@ -108,24 +131,28 @@ aside{
     text-align: right;
     padding-right: 20px;
     font-size: 18px;
+    background-color: var(--navOrange);
 }
 aside ul{
-    padding-bottom: 10px;
+    padding-top: 20px;
     font-style: italic;
+    color: var(--textDark);
 }
 aside li{
     padding-top: 3px;
     padding-bottom: 3px;
     font-style: normal;
 }
-
+aside ul li a{
+    color: var(--bgYellow);
+}
 main.product{
     height: auto;
     grid-area: main;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin-right: 1%;
+    margin-right: 3%;
 }
 section.product{
     width: 305px;
@@ -137,14 +164,17 @@ section.product{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    color: var(--textDark);
 }
 img.productImg{
     flex: 1 1 auto;
     align-self: stretch;
+    /* box-shadow: 5px 5px 3px lightgray; */
 }
 p.productNames{
     flex: 1 1 auto;
     align-self: center;
+    padding-top: 10px;
 }
 p.productPrices{
     flex: 1 1 auto;
@@ -152,17 +182,24 @@ p.productPrices{
 } 
 div.more{
     width: 100%;
-    height: 10px;
+    height: auto;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--hfPink);
+    color: var(--bgYellow);
+    font-size: 22px;
 }
 footer{
     height: auto;
     grid-area: footer;
     text-align: center;
     padding: 10px;
-    padding-top: 50px;
+    margin-top: 20px;
+    border-top: dashed 1px gray;
+}
+footer a{
+    color: black;
 }
 footer ul{
     width: auto;
@@ -172,7 +209,7 @@ footer ul{
 footer p.copyright{
     margin-top: 10px;
     padding-top: 10px;
-    border-top: gray solid 1px;
+    border-top: gray dashed 1px;
 } 
 
 .mainContainer{
@@ -187,14 +224,13 @@ footer p.copyright{
         "aside main main main main"
         "footer footer footer footer footer";
 }
-
 div.upDown{
     width: 45px;
     height: auto;
     position: -webkit-sticky;
     position: sticky;
     bottom: 50px;
-    left: 95%;
+    left: 96%;
     font-size: 40px;
     opacity: 50%;
 }
@@ -210,29 +246,39 @@ div.alphabetFilter{
     height: auto;
     font-size: 40px;
     padding: 5px 10%;
-    grid-area: filter
+    margin-top: 10px;
+    grid-area: filter;
+    border-bottom: dashed 1px gray;
+    letter-spacing: 1px;
 }
 main.crystal{
     margin: auto;
     display: flex;
     flex-flow: row wrap;
-    padding: 10px 8%;
+    margin: 0% 8%;
     grid-area: main;
+    justify-content: space-evenly;
 }
 section.crystal{
-    width: 240px;
-    height: 270px;
+    width: 260px;
+    height: auto;
+    flex: 1 1 auto;
     align-self: stretch;
     display: flex;
     flex-flow: column nowrap;
-    margin: 10px;
+    margin: 20px 15px;
     text-align: center;
-    overflow: hidden;
 }
 section.crystal img{
+    flex: 1 1 auto;
     align-self: stretch;
     border-radius: 50%;
     margin-bottom: 10px;
+}
+section.crystal p{
+    flex: 1 1 auto;
+    align-self: stretch;
+    font-size: 18px;
 }
 .crystalContainer{
     display: grid;
@@ -245,29 +291,55 @@ section.crystal img{
         "main main main main main"
         "footer footer footer footer footer";
 }
+/* Cryastal's floating window */
+div.crystalDetails{
+    display: none;
+    border: 1px solid gray;
+    background-color: white;
+    opacity: 90%;
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 350px;
+    left: 13%;
+    margin: auto;
+    padding: 15px;
+}
+div.crystalDetails img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.crystalDetails i.fa-times{
+    position: absolute;
+    font-size: 40px;
+    top:20px;
+    right: 20px;
+    opacity: 40%;
+}
 
 /* About us Page */
 section.ourStory{
     grid-area: story;
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 10px 8%;
+    margin: 20px 7%;
     padding-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
 }
 section.ourStory img{
-    width: 40%;
-    margin-right: 3%;
     flex: 1 1 auto;
-    align-self: flex-start;
+    align-self: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 section.ourStory div.storyText{
-    width: 55%;
+    width: 500px;
     height: auto;
-    align-self: stretch;
     flex: 1 1 auto;
+    align-self: stretch;
 }
 section.contactUs{
-    margin: 10px 8%;
+    margin: 10px 7%;
     grid-area: contact;
     display: flex;
     flex-flow: row wrap;
@@ -354,8 +426,13 @@ main div.itemDetails{
     i.fa-shopping-bag{
         margin-left: 15%;
     }
+    ul.menu{
+        margin-left: 3%;
+        font-size: 20px;
+        width: 68%;
+    }
     ul.socialMedia{
-        margin-left: 7%;
+        margin-left: 8%;
     }
     main{
         margin-right: 2%;
@@ -369,30 +446,21 @@ main div.itemDetails{
         padding: 5px 8%;
         text-align: center;
     }
-    main.crystal{
-        padding: 10px 4%;
-    }
     section.crystal{
         width: 207px;
-        height: 250px;
+        height: auto;
+    }
+    div.crystalDetails{
+        width: 80%;
+        height: auto;
+        top: 400px;
+        left: 7%;
     }
 
     /* About us page */
     section.ourStory{
-        flex-flow: row wrap;
-        display: block;
+        border-bottom: 1px solid gray;
     }
-    section.ourStory img{
-        width: 400px;
-        display: block;
-        margin: auto;
-    }
-    section.ourStory div.storyText{
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
 
 @media screen and (max-width: 745px) {
     .focus{
@@ -403,11 +471,12 @@ main div.itemDetails{
     }
     header{
         display: flex;
-        flex-flow: column wrap;
-        height: 150px;
+        flex-flow: row nowrap;
+        height: auto;
+        border-right: 1px solid var(--bgYellow);
     }
     a.logo{
-        margin-left: 10%;
+        margin-left: 7%;
     }
     a img.logo{
         height: 120px;
@@ -420,23 +489,63 @@ main div.itemDetails{
     }
     i.fa-shopping-bag{
         font-size: 50px;
-        margin-left: 13%;
+        margin-left: 10%;
     }
-    nav i.fas{
+
+    nav{
+        width: 250px;
+        height: auto;
+        padding: 15px 10px 20px 10px;
+        opacity: 90%;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        display: flex;
+        flex-flow: column nowrap;
+        box-shadow: 10px 10px 5px grey;
+    }
+    nav ul.menu{
+        display: flex;
+        flex-flow: column nowrap;
+        padding-bottom: 10px;
+    }
+    nav i.fa-times{
         display: block;
-        font-size: 50px;
-        margin-left: 40%;
-        margin-top: 65px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 40px;
+        opacity: 60%;
     }
-    nav a{
+    nav{
         display: none;
-    }
+    };
+    nav i.fa-bars{
+        display: block;
+        font-size: 55px;
+        margin-left: 30%;
+        margin-top: 65px;
+        color: var(--textDark);
+    }   
+
     aside{
         margin: 0%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid var(--bgYellow);
+    }
+    aside ul{
+        padding: 0%;
+    }
+    aside li{
+        display: none;
     }
     main{
         margin-left: 2%;
-        margin-right: 2%;
+        padding-right: 5%;
+    }
+    img.productImg{
+    box-shadow: 5px 5px 3px lightgray;
     }
     .mainContainer{
         grid-template-columns: repeat(3, 1fr);
@@ -450,11 +559,14 @@ main div.itemDetails{
     /* Crystalpedia page */
     div.alphabetFilter{
         padding: 5px 4%;
-        font-size: 26px;
+        font-size: 24px;
     }
     section.crystal{
         width: 300px;
         height:auto;
+    }
+    section.crystal img{
+        box-shadow: 5px 5px 5px lightgray;
     }
     .crystalContainer{
         grid-template-columns: repeat(3, 1fr);
@@ -464,36 +576,23 @@ main div.itemDetails{
             "main main main"
             "footer footer footer";
     }
-    /* main.crystal{
-        padding: 10px 5%;
+    div.crystalDetails{
+        top: 200px;
+        left: 5%;
     }
-    section.crystal{
-        width: 240px;
-        height: 270px;
-        align-self: stretch;
-        display: flex;
-        flex-flow: column nowrap;
-        margin: 10px;
-        text-align: center;
-        overflow: hidden;
-    } */
     
     /* About us page */
     section.ourStory{
         flex-flow: row wrap;
-        margin: 10px 4%;
+        margin: 15px 4%;
+        margin-right: 5%;
     }
     section.ourStory img{
         width: 100%;
         align-self: center;
     }
-    section.ourStory div.storyText{
-        width: 100%;
-        height: auto;
-        align-self: center;
-    }
     section.contactUs{
-        margin: 10px 4%;
+        margin-right: 5%;
     }
     .aboutUsContainer{
         grid-template-columns: repeat(3, 1fr);
@@ -502,5 +601,5 @@ main div.itemDetails{
             "story story story"
             "contact contact contact"
             "footer footer footer";
-    }
+    } 
   }
