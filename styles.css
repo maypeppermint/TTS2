@@ -107,8 +107,49 @@ ul.socialMedia{
     text-shadow: 2px 2px var(--textDark);
 }
 .focus{
-    height: 400px;
+    height: 430px;
     grid-area: focus;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+div.focus img{
+    display: inline-block;
+    border: 9px solid white;
+    margin-top: 10px;
+    box-shadow: 0 0 2px 1px lightgray;
+}
+div.focus img.f1{
+    position: absolute;
+    left: -36%;
+    z-index: 1;
+}
+div.focus img.f2{
+    position: absolute;
+    left: 22%;
+    z-index: 3;
+}
+div.focus img.f3{
+    position: absolute;
+    right:-37%;
+    z-index: 2;
+}
+div.focus i{
+    display: inline-block;
+    font-size: 50px;
+    opacity: 70%;
+    padding: 3px;
+    background-color: yellow;
+    color: var(--hfPink);
+    position: absolute;
+    top:45%;
+    z-index: 4;
+}
+div.focus i.fa-chevron-left{
+    left:20%;
+}
+div.focus i.fa-chevron-right{
+    right: 19%;
 }
 .shop{
     height: 40px;
@@ -433,6 +474,29 @@ main div.itemDetails{
     }
     ul.socialMedia{
         margin-left: 8%;
+    }
+    div.focus{
+        height: 380px;
+    }
+    div.focus img.f1{
+        width: 60%;
+        height: auto;
+        left: -40%;
+        top:50px;
+    }
+    div.focus img.f2{
+        width: 80%;
+        height: auto;
+        left: 9%;
+    }
+    div.focus img.f3{
+        width: 60%;
+        height: auto;
+        right:-40%;
+        top:50px;
+    }
+    div.focus i{
+        display: none;
     }
     main{
         margin-right: 2%;
