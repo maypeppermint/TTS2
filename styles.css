@@ -62,9 +62,9 @@ i.fa-shopping-bag{
     align-self: baseline;
     margin-left: 25%;
     margin-top: 50px;
-    color: yellow;
+    color: darkred;
     opacity: 90%;
-    text-shadow: 3px 3px var(--textDark);
+    text-shadow: 3px 3px var(--textDark); 
 }
 nav{
     height: auto;
@@ -139,8 +139,7 @@ div.focus i{
     font-size: 50px;
     opacity: 70%;
     padding: 3px;
-    background-color: yellow;
-    color: var(--hfPink);
+    color: var(--textDark);
     position: absolute;
     top:45%;
     z-index: 4;
@@ -161,7 +160,6 @@ div.focus i.fa-chevron-right{
     color: var(--bgYellow);
     text-align: right;
     padding: 3px 5%;
-
 }
 aside{
     height: auto;
@@ -228,8 +226,10 @@ div.more{
     margin-top: 10px;
     padding: 10px;
     background-color: var(--hfPink);
-    color: var(--bgYellow);
     font-size: 22px;
+}
+div.more a{
+    color: var(--bgYellow);
 }
 footer{
     height: auto;
@@ -276,9 +276,11 @@ div.upDown{
     opacity: 50%;
 }
 div i.fa-arrow-circle-up{
+    color: gray;
     display: block;
 }
 div i.fa-arrow-circle-down{
+    color: gray;
     display: block;
 }
 
@@ -341,9 +343,8 @@ div.crystalDetails{
     width: 70%;
     height: auto;
     position: absolute;
-    top: 350px;
+    top: 200px;
     left: 13%;
-    margin: auto;
     padding: 15px;
 }
 div.crystalDetails img{
@@ -356,7 +357,8 @@ div.crystalDetails i.fa-times{
     font-size: 40px;
     top:20px;
     right: 20px;
-    opacity: 40%;
+    opacity: 60%;
+    text-shadow: 2px 2px var(--textDark);
 }
 
 /* About us Page */
