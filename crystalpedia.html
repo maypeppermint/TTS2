@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>That Stone Store</title>
     <script src="https://kit.fontawesome.com/0113cd4765.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
     <div class="crystalContainer">
-        <header>
+        <header id="top">
             <a class="logo" href="index.html">
                 <img class="logo" src="pic/logo.png" alt="That Stone Store logo">
             </a>
@@ -20,8 +21,8 @@
             <i class="fas fa-search"></i>
             <i class="fas fa-shopping-bag"></i>
         </header>
+        <i class="fas fa-bars barMenu"></i>
         <nav>
-            <i class="fas fa-bars"></i>
             <ul class="menu">
                 <a href="index.html" class="menu">HOME</a>
                 <a href="index.html#shop" class="menu">SHOP</a>
@@ -45,6 +46,7 @@
                     <i class="fab fa-twitter-square"></i>
                 </a>
             </ul>
+            <i class="fas fa-times"></i>
         </nav>
         <div class="alphabetFilter">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</div>
         <main class="crystal">
@@ -98,14 +100,14 @@
             </section>
             <div class="more">View more</div>
         </div>
-        <footer>
+        <footer id="bottom">
             <ul class="footerContactInfo">
                 <li><b>Contact Us</b></li>
-                <p>
+                <li>
                     Email: <a href="mailto:hej@thatstonestore.com">hej@thatstonestore.com</a><br>
                     Tel: 0123456789<br>
-                    Address: Hornsgatan 33A, 118 49 Stockholm
-                </p>
+                    Address: <a href="https://goo.gl/maps/JczxQ1dvHd6GXKVa8" target="_blank">Hornsgatan 33A, 118 49 Stockholm</a> 
+                </li>
             </ul>
             <ul class="footerFAQ">
                 <li><b>FAQ</b></li>
@@ -128,10 +130,10 @@
             <br><br> aliquid, quis debitis totam ducimus quas earum sapiente sit praesentium iusto eos saepe vel excepturi aperiam nemo laborum autem architecto ad! A atque pariatur unde corporis?</p>
     </div>
     <div class="upDown">
-        <i class="fas fa-arrow-circle-up"></i>
-        <i class="fas fa-arrow-circle-down"></i>
+        <a href="crystalpedia.html#top"><i class="fas fa-arrow-circle-up"></i></a>
+        <a href="crystalpedia.html#bottom"><i class="fas fa-arrow-circle-down"></i></a>
     </div>
-
+    <script src="js/main.js"></script>
 
 </body>
 

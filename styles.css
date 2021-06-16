@@ -66,14 +66,14 @@ i.fa-shopping-bag{
     opacity: 90%;
     text-shadow: 3px 3px var(--textDark); 
 }
+i.barMenu{
+    display: none;
+}
 nav{
     height: auto;
     grid-area: nav;
     display: flex;
     background-color: var(--navOrange);
-}
-nav i.fas{
-    display: none;
 }
 ul.menu{
     align-self: center;
@@ -106,6 +106,9 @@ ul.socialMedia{
     opacity: 75%;
     text-shadow: 2px 2px var(--textDark);
 }
+nav i.fa-times{
+    display: none;
+}
 .focus{
     height: 430px;
     grid-area: focus;
@@ -115,40 +118,26 @@ ul.socialMedia{
 }
 div.focus img{
     display: inline-block;
-    border: 9px solid white;
+    padding: 9px;
+    background-color: white;
+    border: 1px solid lightgrey;
     margin-top: 10px;
     box-shadow: 0 0 2px 1px lightgray;
 }
 div.focus img.f1{
     position: absolute;
-    left: -36%;
+    left: -38%;
     z-index: 1;
 }
 div.focus img.f2{
     position: absolute;
-    left: 22%;
+    left: 20%;
     z-index: 3;
 }
 div.focus img.f3{
     position: absolute;
-    right:-37%;
+    left: 78%;
     z-index: 2;
-}
-div.focus i{
-    display: inline-block;
-    font-size: 50px;
-    opacity: 70%;
-    padding: 3px;
-    color: var(--textDark);
-    position: absolute;
-    top:45%;
-    z-index: 4;
-}
-div.focus i.fa-chevron-left{
-    left:20%;
-}
-div.focus i.fa-chevron-right{
-    right: 19%;
 }
 .shop{
     height: 40px;
@@ -557,18 +546,28 @@ main div.itemDetails{
         font-size: 50px;
         margin-left: 10%;
     }
-
+    i.fa-bars{
+        display: block;
+        font-size: 60px;
+        padding-left:38px;
+        padding-top: 60px;
+        color: var(--textDark);
+        grid-area: barMenu;
+        background-color: var(--navOrange);
+    } 
     nav{
-        width: 250px;
+        display: none;
+        width: 240px;
         height: auto;
         padding: 15px 10px 20px 10px;
-        opacity: 90%;
+        opacity: 80%;
         position: absolute;
         top: 0%;
         right: 0%;
         display: flex;
         flex-flow: column nowrap;
-        box-shadow: 10px 10px 5px grey;
+        border-left: 1px solid var(--textDark);
+        border-bottom: 1px solid var(--textDark);
     }
     nav ul.menu{
         display: flex;
@@ -583,16 +582,9 @@ main div.itemDetails{
         font-size: 40px;
         opacity: 60%;
     }
-    nav{
+    a[href="index.html#shop"]{
         display: none;
-    };
-    nav i.fa-bars{
-        display: block;
-        font-size: 55px;
-        margin-left: 30%;
-        margin-top: 65px;
-        color: var(--textDark);
-    }   
+    }  
 
     aside{
         margin: 0%;
@@ -616,7 +608,7 @@ main div.itemDetails{
     .mainContainer{
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-            "header header nav" 
+            "header header barMenu" 
             "aside aside aside"
             "main main main"
             "footer footer footer";
@@ -637,7 +629,7 @@ main div.itemDetails{
     .crystalContainer{
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-            "header header nav" 
+            "header header barMenu" 
             "filter filter filter"
             "main main main"
             "footer footer footer";
@@ -663,7 +655,7 @@ main div.itemDetails{
     .aboutUsContainer{
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-            "header header nav" 
+            "header header barMenu" 
             "story story story"
             "contact contact contact"
             "footer footer footer";
