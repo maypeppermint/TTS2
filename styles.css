@@ -6,11 +6,11 @@
 }
 :root{
     --bgYellow: #faf7e9;
-    --hfPink: #e46c86;
-    --navOrange: #fd8046;
-    --textDark: #363636;
+    --hfPink: #f1889f;
+    --navOrange: #f08756;
+    --textDark: #282b2c;
 }
-p,div{
+p,div,footer{
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }
@@ -116,6 +116,22 @@ nav i.fa-times{
     overflow: hidden;
     margin-bottom: 10px;
 }
+div.focus i{
+    position: absolute;
+    font-size: 80px;
+    columns: var(--textDark);
+    background-color: var(--bgYellow);
+    z-index: 4;
+    opacity: 50%;
+}
+div.focus i.fa-chevron-left{
+    padding: 180px 100px 200px 50px;
+    left: 0;
+}
+div.focus i.fa-chevron-right{
+    padding: 180px 50px 200px 100px;
+    right: 0;
+}
 div.focus img{
     display: inline-block;
     padding: 9px;
@@ -190,6 +206,10 @@ section.product{
     margin-left: 0.5%;
     margin-right: 0.5%;
     display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-flow: column nowrap;
     justify-content: center;
     color: var(--textDark);
@@ -197,7 +217,6 @@ section.product{
 img.productImg{
     flex: 1 1 auto;
     align-self: stretch;
-    /* box-shadow: 5px 5px 3px lightgray; */
 }
 p.productNames{
     flex: 1 1 auto;
@@ -400,7 +419,7 @@ section.contactUs iframe{
         "footer footer footer footer footer";
 }
 
-/* Product Page 
+/* Product Page (Flexbox doesn't work right)
 main.item{
     margin-left: 7%;
     margin-right: 7%;
